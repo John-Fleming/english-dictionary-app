@@ -15,6 +15,8 @@ def look_up_defintion(word):
   
   if formatted_word in definitions:
     return definitions[formatted_word]
+  elif formatted_word.title() in definitions:
+    return definitions[formatted_word.title()]
   else:
     matched_word = find_closest_word(formatted_word)
     return matched_word if matched_word is not None else 'Could not find that word in dictionary'
